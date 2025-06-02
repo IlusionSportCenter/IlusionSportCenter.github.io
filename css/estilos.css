@@ -180,51 +180,6 @@ button:hover {
   background-color: #0066cc;
 }
 
-/* RESPONSIVE GENERAL */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  .cabecera {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .cabecera h1 {
-    font-size: 1.5em;
-    white-space: nowrap;
-  }
-
-  .logo-izq {
-    width: 70px;
-    height: 70px;
-  }
-
-  .logo-der {
-    width: 120px;
-    height: 70px;
-  }
-
-  .inicio-imagenes img {
-    max-width: 100%;
-  }
-
-  .gimnasio-fotos {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 /* GIMNASIO */
 #gimnasio {
   padding: 60px 20px;
@@ -271,5 +226,50 @@ button:hover {
 
 .gimnasio-fotos img:hover {
   transform: scale(1.05);
+}
+
+/* RESPONSIVE GENERAL */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .cabecera {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .cabecera h1 {
+    font-size: 1.5em;
+    white-space: nowrap;
+  }
+
+  .logo-izq {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-der {
+    width: 120px;
+    height: 70px;
+  }
+
+  .inicio-imagenes img {
+    max-width: 100%;
+  }
+
+  .gimnasio-fotos {
+    grid-template-columns: 1fr !important;
+  }
 }
 
