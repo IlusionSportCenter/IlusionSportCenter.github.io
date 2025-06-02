@@ -201,26 +201,29 @@ footer a:hover {
 
 .inicio-imagenes {
   display: flex;
-  gap: 20px;
-  justify-content: center;
   flex-wrap: wrap;
-  margin: 20px auto;
-  max-width: 1000px;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
 .inicio-imagenes img {
-  width: 48%;
+  width: 100%;
+  max-width: 500px;
   height: auto;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Diseño responsive: en pantallas pequeñas, se apilan */
+/* Responsive: imágenes en columna en pantallas pequeñas */
 @media (max-width: 768px) {
   .inicio-imagenes img {
-    width: 100%;
+    max-width: 100%;
   }
 }
+
 
 
