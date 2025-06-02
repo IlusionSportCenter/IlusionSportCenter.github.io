@@ -129,12 +129,15 @@ img {
 }
 
 .inicio-imagenes img {
-  flex: 0 0 48%;
-  height: auto;
+  flex: 0 0 48% !important;
+  max-width: 48% !important;
+  aspect-ratio: 4 / 3; /* proporción uniforme */
   object-fit: cover;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Móvil: una debajo de la otra */
 @media (max-width: 768px) {
