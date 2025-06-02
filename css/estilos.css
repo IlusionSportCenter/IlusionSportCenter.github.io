@@ -147,8 +147,9 @@ img {
 @media (max-width: 768px) {
   .imagen-contenedor {
     width: 100%;
-
+  }
 }
+
 
 /* FOOTER */
 footer {
