@@ -121,7 +121,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
@@ -144,17 +144,6 @@ img {
   display: block;
 }
 
-.inicio-imagenes img {
-  flex: 0 0 48% !important;
-  max-width: 48% !important;
-  aspect-ratio: 4 / 3; /* proporción uniforme */
-  object-fit: cover;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
 /* Móvil: una debajo de la otra */
 @media (max-width: 768px) {
   .inicio-imagenes {
@@ -162,7 +151,7 @@ img {
     align-items: center;
   }
 
-  .inicio-imagenes img {
+  .imagen-contenedor {
     flex: 0 0 100%;
     max-width: 100%;
   }
@@ -296,36 +285,7 @@ button:hover {
     height: 70px;
   }
 
-  .inicio-imagenes img {
-    max-width: 100%;
-  }
-
   .gimnasio-fotos {
     grid-template-columns: 1fr !important;
   }
 }
-
-/* Corrección específica para que en ordenadores las imágenes del inicio vayan en fila */
-@media (min-width: 769px) {
-  .inicio-imagenes {
-    flex-direction: row;
-  }
-
-  .inicio-imagenes img {
-    flex: 0 0 48%;
-    max-width: 48%;
-  }
-}
-
-@media (min-width: 769px) {
-  .inicio-imagenes {
-    display: flex !important;
-    flex-direction: row !important;
-  }
-
-  .inicio-imagenes img {
-    flex: 0 0 48% !important;
-    max-width: 48% !important;
-  }
-}
-
