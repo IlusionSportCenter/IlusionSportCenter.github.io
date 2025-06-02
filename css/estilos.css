@@ -121,6 +121,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
@@ -128,7 +129,7 @@ img {
 }
 
 .inicio-imagenes img {
-  width: 45%;
+  flex: 0 0 48%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -143,10 +144,10 @@ img {
   }
 
   .inicio-imagenes img {
-    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
-
 
 /* FOOTER */
 footer {
@@ -285,7 +286,7 @@ button:hover {
   }
 }
 
-/* Corrección final: fuerza imágenes del inicio en horizontal en escritorio */
+/* Corrección específica para que en ordenadores las imágenes del inicio vayan en fila */
 @media (min-width: 769px) {
   .inicio-imagenes {
     flex-direction: row;
@@ -296,4 +297,3 @@ button:hover {
     max-width: 48%;
   }
 }
-
