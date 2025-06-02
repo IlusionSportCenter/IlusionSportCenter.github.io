@@ -285,3 +285,15 @@ button:hover {
   }
 }
 
+/* Corrección final: fuerza imágenes del inicio en horizontal en escritorio */
+@media (min-width: 769px) {
+  .inicio-imagenes {
+    flex-direction: row;
+  }
+
+  .inicio-imagenes img {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+
