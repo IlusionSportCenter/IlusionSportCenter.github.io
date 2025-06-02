@@ -136,6 +136,20 @@ img {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .inicio-imagenes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inicio-imagenes img {
+    max-width: 100%;
+  }
+}
+
+}
+
 /* FOOTER */
 footer {
   text-align: center;
