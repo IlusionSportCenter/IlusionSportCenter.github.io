@@ -121,7 +121,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
   gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
@@ -129,9 +128,8 @@ img {
 }
 
 .imagen-contenedor {
-  flex: 0 0 48%;
-  max-width: 48%;
-  aspect-ratio: 4 / 2.5; /* Aumentado el alto relativo */
+  width: 48%;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -140,21 +138,16 @@ img {
 .imagen-contenedor img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Para que se vea la imagen entera sin cortar nada */
   display: block;
+  background-color: white;
 }
 
-/* Móvil: una debajo de la otra */
+/* Móviles */
 @media (max-width: 768px) {
-  .inicio-imagenes {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .imagen-contenedor {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+    width: 100%;
+
 }
 
 /* FOOTER */
