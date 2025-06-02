@@ -199,5 +199,28 @@ footer a:hover {
   }
 }
 
+.inicio-imagenes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.inicio-imagenes img {
+  width: 48%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Diseño responsive: en pantallas pequeñas, se apilan */
+@media (max-width: 768px) {
+  .inicio-imagenes img {
+    width: 100%;
+  }
+}
 
 
