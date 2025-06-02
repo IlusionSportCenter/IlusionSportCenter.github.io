@@ -272,11 +272,7 @@ footer a:hover {
   transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
-  .gimnasio-fotos {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 
 
