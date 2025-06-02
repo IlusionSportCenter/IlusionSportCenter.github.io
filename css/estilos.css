@@ -131,7 +131,7 @@ img {
 .imagen-contenedor {
   flex: 0 0 48%;
   max-width: 48%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 2.5; /* Aumentado el alto relativo */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
