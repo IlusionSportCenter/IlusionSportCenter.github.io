@@ -368,3 +368,28 @@ button:hover {
   }
 }
 
+@media (min-width: 769px) {
+  .inicio-imagenes {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+
+  .imagen-contenedor {
+    flex: 0 0 48% !important;
+    max-width: 48% !important;
+    aspect-ratio: 4 / 3 !important;
+    overflow: hidden !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .imagen-contenedor img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
