@@ -312,3 +312,30 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Reajuste para que los logos y el título se vean igual en móvil */
+@media (max-width: 768px) {
+  .cabecera {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    padding: 10px 0 !important;
+  }
+
+  .cabecera img {
+    margin: 0 auto !important;
+  }
+
+  .cabecera h1 {
+    font-size: 1.5em !important;
+    margin: 0 !important;
+  }
+
+  .logo-izq, .logo-der {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
