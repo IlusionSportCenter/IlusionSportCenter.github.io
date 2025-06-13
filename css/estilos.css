@@ -209,3 +209,33 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+.inicio-imagenes {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  max-width: 1200px !important;
+  margin: 40px auto !important;
+  padding: 0 20px !important;
+}
+
+.inicio-imagenes img {
+  width: 45% !important;
+  height: auto !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  display: block !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Móvil: una debajo de otra */
+@media (max-width: 768px) {
+  .inicio-imagenes {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .inicio-imagenes img {
+    width: 100% !important;
+  }
+}
