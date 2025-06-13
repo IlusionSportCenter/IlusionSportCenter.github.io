@@ -341,4 +341,44 @@ button:hover {
     height: 80px !important;
   }
 }
+/* CABECERA: tamaño imágenes ajustado */
+
+/* Ordenador */
+.logo-izq {
+  width: 100px !important;
+  height: 100px !important;
+  justify-self: start;
+}
+
+.logo-der {
+  width: 170px !important;
+  height: 100px !important;
+  justify-self: end;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  .cabecera {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .cabecera h1 {
+    font-size: 1.5em !important;
+    white-space: nowrap !important;
+  }
+
+  .logo-izq {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .logo-der {
+    width: 140px !important; /* el doble que la izq */
+    height: auto !important;
+  }
+}
 
