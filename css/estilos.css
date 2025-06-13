@@ -38,16 +38,17 @@ header {
 }
 
 .logo-izq {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   justify-self: start;
 }
 
 .logo-der {
-  width: 135px;
-  height: 80px;
+  width: 170px;
+  height: 100px;
   justify-self: end;
 }
+
 
 .cabecera h1 {
   text-align: center;
@@ -276,9 +277,11 @@ button:hover {
   }
 
   .logo-der {
-    width: 120px;
-    height: 70px;
+    width: 140px;  /* el doble que la izq */
+    height: auto;
   }
+}
+
 
   .gimnasio-fotos {
     grid-template-columns: 1fr !important;
