@@ -381,4 +381,36 @@ button:hover {
     height: auto !important;
   }
 }
+/* Estilo específico para las imágenes del inicio */
+
+.inicio-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.inicio-imagenes img {
+  width: 48% !important;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* En móvil: una debajo de otra */
+@media (max-width: 768px) {
+  .inicio-imagenes {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .inicio-imagenes img {
+    width: 100% !important;
+  }
+}
 
