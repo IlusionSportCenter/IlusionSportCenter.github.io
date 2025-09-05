@@ -239,23 +239,25 @@ footer a:hover {
     width: 100% !important;
   }
   .inicio-imagenes {
-  text-align: center; /* centra todo el contenido */
+  text-align: center;
   margin: 20px 0;
 }
 
-.fila-superior {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* separación entre las dos imágenes de arriba */
+.fila-superior img {
+  width: 90%;   /* ocupa casi todo el ancho, como una "portada" */
+  margin-bottom: 20px;
 }
 
-.fila-superior img {
-  width: 45%; /* mismo tamaño */
+.fila-inferior {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .fila-inferior img {
-  width: 45%; /* misma proporción que las de arriba */
-  margin-top: 20px;
+  width: 45%;   /* las dos de abajo del mismo tamaño */
 }
+
 }
+
 
