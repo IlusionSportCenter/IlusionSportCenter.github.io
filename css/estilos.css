@@ -248,18 +248,21 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    .fila-superior img {
+    width: 105%;       /* sobresale un poco respecto al contenedor */
+    max-width: none;   /* sin límite */
+  }
   }
 
-  .fila-superior img,
-  .fila-inferior img {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 12px;
-  }
+.fila-superior img {
+  width: 100%;
+  max-width: 1300px;   /* subimos el tope: antes 1100px */
+  display: block;
+  margin: 0 auto 24px;
+}
+  
 }
 
-
-}
 
 
 
