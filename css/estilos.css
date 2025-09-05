@@ -257,7 +257,35 @@ footer a:hover {
 .fila-inferior img {
   width: 45%;   /* las dos de abajo del mismo tamaño */
 }
+/* --- Versión móvil: tres imágenes en columna --- */
+@media (max-width: 768px) {
+  .fila-superior img {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .fila-inferior {
+    display: flex;          /* mantiene el layout actual */
+    flex-direction: column; /* apila en columna en móvil */
+    align-items: center;    /* centra las imágenes */
+    gap: 12px;
+  }
+
+  .fila-inferior img {
+    width: 100%;            /* cada imagen ocupa todo el ancho disponible */
+  }
+
+  /* Seguridad extra para que nunca se desborden */
+  .inicio-imagenes img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 }
+
 
 
