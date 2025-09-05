@@ -238,4 +238,24 @@ footer a:hover {
   .inicio-imagenes img {
     width: 100% !important;
   }
+  .inicio-imagenes {
+  text-align: center; /* centra todo el contenido */
+  margin: 20px 0;
 }
+
+.fila-superior {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* separación entre las dos imágenes de arriba */
+}
+
+.fila-superior img {
+  width: 45%; /* mismo tamaño */
+}
+
+.fila-inferior img {
+  width: 45%; /* misma proporción que las de arriba */
+  margin-top: 20px;
+}
+}
+
