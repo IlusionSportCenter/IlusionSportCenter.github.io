@@ -209,45 +209,23 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+/* ====== INICIO: 1 arriba grande + 2 abajo ====== */
 .inicio-imagenes {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 20px !important;
-  max-width: 1200px !important;
-  margin: 40px auto !important;
-  padding: 0 20px !important;
-}
-
-.inicio-imagenes img {
-  width: 46% !important;
-  height: auto !important;
-  object-fit: cover !important;
-  border-radius: 10px !important;
-  display: block !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Móvil: una debajo de otra */
-@media (max-width: 768px) {
-  .inicio-imagenes {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  .inicio-imagenes img {
-    width: 100% !important;
-  }
-  .inicio-imagenes {
   text-align: center;
-  margin: 20px 0;
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1200px; /* contenedor cómodo */
 }
 
+/* FOTO 1 ARRIBA – grande */
 .fila-superior img {
-  width: 90%;   /* ocupa casi todo el ancho, como una "portada" */
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1100px;  /* hace la foto 1 más grande que el tope global */
+  display: block;
+  margin: 0 auto 20px;
 }
 
+/* FOTOS 2 y 3 ABAJO – en fila */
 .fila-inferior {
   display: flex;
   justify-content: center;
@@ -255,37 +233,34 @@ footer a:hover {
 }
 
 .fila-inferior img {
-  width: 45%;   /* las dos de abajo del mismo tamaño */
+  width: 48%;
 }
-/* --- Versión móvil: tres imágenes en columna --- */
-@media (max-width: 768px) {
-  .fila-superior img {
-    width: 100%;
-    margin-bottom: 12px;
-  }
 
+/* Asegura que el tope global de img no limite estas */
+.inicio-imagenes img {
+  max-width: none;   /* anula el max-width:700px del estilo global */
+  height: auto;
+}
+
+/* ====== MÓVIL (≤768px): tres en columna ====== */
+@media (max-width: 768px) {
   .fila-inferior {
-    display: flex;          /* mantiene el layout actual */
-    flex-direction: column; /* apila en columna en móvil */
-    align-items: center;    /* centra las imágenes */
+    flex-direction: column;
+    align-items: center;
     gap: 12px;
   }
 
+  .fila-superior img,
   .fila-inferior img {
-    width: 100%;            /* cada imagen ocupa todo el ancho disponible */
-  }
-
-  /* Seguridad extra para que nunca se desborden */
-  .inicio-imagenes img {
+    width: 100%;
     max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 12px;
   }
 }
 
+
 }
+
 
 
 
