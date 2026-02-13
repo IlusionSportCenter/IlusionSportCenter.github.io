@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
 
-  <!-- Estilos extra solo para esta portada (puedes moverlos a estilos.css si quieres) -->
   <style>
     .contenedor {
       width: min(1100px, 92%);
@@ -49,17 +48,11 @@
       box-shadow: 0 6px 18px rgba(0,0,0,.08);
       display: grid;
       gap: 10px;
+      min-height: 170px;
     }
 
     .card h3 { margin: 0; }
     .card p { margin: 0; color: #333; }
-
-    .card .thumb {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
 
     .btn {
       display: inline-block;
@@ -129,7 +122,6 @@
       border-radius: 12px;
     }
 
-    /* Responsive */
     @media (max-width: 820px) {
       .hero { grid-template-columns: 1fr; }
       .hero img { height: 220px; }
@@ -162,47 +154,38 @@
 
   <main class="contenedor">
 
-    <!-- 1) LO PRIMERO: HORARIO + FOTO VISIBLE -->
+    <!-- HORARIO + FOTO (VISIBLE AL ABRIR) -->
     <section class="hero" aria-label="Horario y aviso principal">
       <div>
         <h2>⏰ Horario</h2>
         <p><strong>Lunes a Viernes:</strong> 07:00 – 22:00</p>
         <p><strong>Sábados:</strong> 09:00 – 14:00</p>
         <p><strong>Domingos y festivos:</strong> consultar</p>
-        <p style="margin-top:10px;">📌 Aquí puedes añadir avisos rápidos: cambios de horario, promociones, etc.</p>
+        <p style="margin-top:10px;">📌 Avisos: cambios de horario, promociones, etc.</p>
       </div>
       <img src="img/horario.jpg" alt="Horario de Ilusión Sport Center">
     </section>
 
-    <!-- 2) ACTUALIDAD: tarjetas clicables -->
     <section>
       <h2>Actualidad</h2>
       <p>Aquí publicamos novedades, eventos, cambios de horarios, promociones y noticias del día a día.</p>
 
       <div class="grid">
 
-        <!-- Cumpleaños NIÑOS -->
+        <!-- Cumpleaños NIÑOS (SIN IMAGEN visible) -->
         <article class="card">
           <h3>🎉 Cumpleaños para niños</h3>
-          <img class="thumb" src="img/cumple-ninos.jpg" alt="Cumpleaños para niños">
           <p>Celebraciones con deporte, juegos y merienda. Ideal para grupos.</p>
-          <button class="btn"
-            data-modal="modal-ninos"
-            aria-controls="modal-ninos"
-            aria-expanded="false">
+          <button class="btn" data-modal="modal-ninos" aria-controls="modal-ninos" aria-expanded="false">
             Más información
           </button>
         </article>
 
-        <!-- Cumpleaños NIÑAS -->
+        <!-- Cumpleaños NIÑAS (SIN IMAGEN visible) -->
         <article class="card">
           <h3>🎀 Cumpleaños para niñas</h3>
-          <img class="thumb" src="img/cumple-ninas.jpg" alt="Cumpleaños para niñas">
           <p>Celebraciones con actividades dinámicas y espacios preparados para pasarlo genial.</p>
-          <button class="btn"
-            data-modal="modal-ninas"
-            aria-controls="modal-ninas"
-            aria-expanded="false">
+          <button class="btn" data-modal="modal-ninas" aria-controls="modal-ninas" aria-expanded="false">
             Más información
           </button>
         </article>
@@ -210,7 +193,6 @@
       </div>
     </section>
 
-    <!-- Si quieres, puedes mantener tu sección de eventos debajo -->
     <section>
       <h3>🗓️ Próximos eventos</h3>
       <ul>
@@ -227,7 +209,7 @@
     <p><a href="https://www.instagram.com/ilusionsport" target="_blank">@ilusionsport</a></p>
   </footer>
 
-  <!-- MODAL NIÑOS -->
+  <!-- MODAL NIÑOS (AQUÍ SÍ sale la imagen) -->
   <div class="modal" id="modal-ninos" role="dialog" aria-modal="true" aria-labelledby="titulo-ninos">
     <div class="modal-contenido">
       <div class="modal-header">
@@ -242,7 +224,7 @@
     </div>
   </div>
 
-  <!-- MODAL NIÑAS -->
+  <!-- MODAL NIÑAS (AQUÍ SÍ sale la imagen) -->
   <div class="modal" id="modal-ninas" role="dialog" aria-modal="true" aria-labelledby="titulo-ninas">
     <div class="modal-contenido">
       <div class="modal-header">
@@ -257,7 +239,6 @@
     </div>
   </div>
 
-  <!-- JS para abrir/cerrar modales -->
   <script>
     const botones = document.querySelectorAll("[data-modal]");
     const modales = document.querySelectorAll(".modal");
@@ -266,7 +247,6 @@
       const modal = document.getElementById(id);
       if (!modal) return;
       modal.classList.add("activo");
-      // Marcar aria-expanded
       botones.forEach(b => {
         if (b.getAttribute("data-modal") === id) b.setAttribute("aria-expanded", "true");
       });
@@ -282,15 +262,12 @@
     });
 
     modales.forEach((modal) => {
-      // Cerrar con X
       modal.querySelector(".cerrar").addEventListener("click", () => cerrarModal(modal));
-      // Cerrar clicando fuera del contenido
       modal.addEventListener("click", (e) => {
         if (e.target === modal) cerrarModal(modal);
       });
     });
 
-    // Cerrar con ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         modales.forEach(m => m.classList.contains("activo") && cerrarModal(m));
